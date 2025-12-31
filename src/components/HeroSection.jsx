@@ -2,7 +2,9 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden">
+    // <section className="relative overflow-hidden">
+    // <section className="bg-gradient-to-r from-pink-50 via-white to-red-50">
+    <section className="bg-[#fff1f5]">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">

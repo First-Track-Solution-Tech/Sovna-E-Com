@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -24,6 +24,9 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-white">
                 <Twitter className="w-5 h-5" />
               </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Youtube className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -37,23 +40,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-gray-400 hover:text-white">
-                  Products
+                <Link to="/abouts" className="text-gray-400 hover:text-white">
+                  Abouts
                 </Link>
               </li>
               <li>
-                <Link to="/products?category=tshirts" className="text-gray-400 hover:text-white">
-                  T-Shirts
+                <Link to="/blog" className="text-gray-400 hover:text-white">
+                  Blog
                 </Link>
               </li>
               <li>
-                <Link to="/products?category=hoodies" className="text-gray-400 hover:text-white">
-                  Hoodies
-                </Link>
-              </li>
-              <li>
-                <Link to="/products?category=jeans" className="text-gray-400 hover:text-white">
-                  Jeans
+                <Link to="/contact us" className="text-gray-400 hover:text-white">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -75,9 +73,7 @@ const Footer = () => {
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">Size Guide</a>
               </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">Contact Us</a>
-              </li>
+
             </ul>
           </div>
 
@@ -91,7 +87,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">01234</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-gray-400" />
