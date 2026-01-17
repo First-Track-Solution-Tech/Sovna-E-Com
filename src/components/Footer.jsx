@@ -131,7 +131,7 @@ const Footer = () => {
 
         {/* Brand */}
         <div>
-          <h2 className="text-xl font-bold mb-3">FashionStore</h2>
+          <h2 className="text-xl font-bold mb-3">Fashion Style</h2>
           <p className="text-gray-400 mb-4">
             Your one-stop destination for trendy and affordable fashion.
           </p>
@@ -158,9 +158,12 @@ const Footer = () => {
           <h3 className="font-semibold mb-4">Customer Service</h3>
           <ul className="space-y-2 text-gray-400">
             <li><Link to="/faq" className="hover:text-white">FAQ</Link></li>
-            <li><Link to="/shipping-policy" className="hover:text-white">Shipping Policy</Link></li>
-            <li><Link to="/returns-exchanges" className="hover:text-white">Returns & Exchanges</Link></li>
+            <li><Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
+            <li><Link to="/terms-of-use" className="hover:text-white">Terms Of Uses</Link></li>
+            <li><Link to="/returns-exchanges" className="hover:text-white">Return & Exchanges</Link></li>
+            <li><Link to="/refund-cancellation" className="hover:text-white">Refund & Cancellation</Link></li> 
             <li><Link to="/size-guide" className="hover:text-white">Size Guide</Link></li>
+             
           </ul>
         </div>
 

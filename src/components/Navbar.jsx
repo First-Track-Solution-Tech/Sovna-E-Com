@@ -336,25 +336,95 @@ const Navbar = ({ cartCount = 0, wishlistCount = 0 }) => {
         </div>
       </nav>
 
-      {/* 📱 MOBILE MENU */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow border-t px-6 py-4 space-y-2">
+     {/* 📱 MOBILE MENU */}
+        {isMenuOpen && (
+          <div className="md:hidden fixed inset-0 z-50 bg-black/30">
+            <div className="absolute right-0 top-0 w-64 h-full bg-white shadow-lg flex flex-col">
+              
+              {/* Header */}
+              <div className="flex items-center justify-between p-4 border-b">
+                <h2 className="text-xl font-bold text-gray-900">
+                  Fashion <span className="text-red-500">Style</span>
+                </h2>
+                <button onClick={() => setIsMenuOpen(false)}>
+                  <X size={24} />
+                </button>
+              </div>
 
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-          <Link to="/products" onClick={() => setIsMenuOpen(false)}>Products</Link>
+              {/* Menu Links */}
+              <nav className="flex-1 overflow-y-auto p-4 space-y-2">
+                <Link
+                  to="/"
+                  className="block text-gray-800 hover:text-pink-600 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Home
+                </Link>
 
-          <Link to="/categories" className="font-semibold">
-            Categories
-          </Link>
-          <Link to="/category/T-Shirts" className="block pl-4">T-Shirts</Link>
-          <Link to="/category/Hoodies" className="block pl-4">Hoodies</Link>
-          <Link to="/category/Jeans" className="block pl-4">Jeans</Link>
-          <Link to="/category/Ethnic Wear" className="block pl-4">Ethnic Wear</Link>
+                <Link
+                  to="/products"
+                  className="block text-gray-800 hover:text-pink-600 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Products
+                </Link>
 
-          <Link to="/new-arrivals" onClick={() => setIsMenuOpen(false)}>New Arrivals</Link>
-          <Link to="/sale" onClick={() => setIsMenuOpen(false)}>Sale</Link>
-        </div>
-      )}
+                {/* Collapsible Categories */}
+                <details className="group">
+                  <summary className="cursor-pointer flex justify-between items-center text-gray-800 font-semibold hover:text-pink-600 py-1">
+                    Categories
+                  </summary>
+                  <div className="ml-4 mt-2 flex flex-col space-y-2">
+                    <Link
+                      to="/category/T-Shirts"
+                      className="text-gray-700 hover:text-pink-600"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      T-Shirts
+                    </Link>
+                    <Link
+                      to="/category/Hoodies"
+                      className="text-gray-700 hover:text-pink-600"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Hoodies
+                    </Link>
+                    <Link
+                      to="/category/Jeans"
+                      className="text-gray-700 hover:text-pink-600"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Jeans
+                    </Link>
+                    <Link
+                      to="/category/Ethnic Wear"
+                      className="text-gray-700 hover:text-pink-600"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Ethnic Wear
+                    </Link>
+                  </div>
+                </details>
+
+                <Link
+                  to="/new-arrivals"
+                  className="block text-gray-800 hover:text-pink-600 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  New Arrivals
+                </Link>
+                <Link
+                  to="/sale"
+                  className="block text-gray-800 hover:text-pink-600 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Sale
+                </Link>
+              </nav>
+            </div>
+          </div>
+    )}
+
     </header>
   );
 };
