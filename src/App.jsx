@@ -70,13 +70,17 @@ import Wishlist from "./pages/Wishlist";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Category from "./pages/Category";
-import ReturnsExchanges from "./pages/ReturnsExchanges";
 import FAQ from "./pages/FAQ";                 
-import ShippingPolicy from "./pages/ShippingPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import SizeGuide from "./pages/SizeGuide";
 import NewArrivals from "./pages/NewArrivals";
 import Sale from "./pages/Sale";
-
+import AboutUs from "./pages/AboutUs";
+import Blog from "./pages/Blog";
+import ContactUs from "./pages/ContactUs";
+import TermsOfUses from "./pages/TermsOfUses";
+import ReturnAndExchanges from "./pages/ReturnAndExchanges";
+import RefundAndCancellation from "./pages/RefundAndCancellation";
 function App() {
   return (
     <Router>
@@ -95,10 +99,15 @@ function App() {
 
         {/* Footer pages */}
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/shipping-policy" element={<ShippingPolicy />} />
-        <Route path="/size-guide" element={<SizeGuide />} />
-        <Route path="/returns-exchanges" element={<ReturnsExchanges />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUses />} />
+        <Route path="/returns-exchanges" element={<ReturnAndExchanges />} />
 
+        <Route path="/size-guide" element={<SizeGuide />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/refund-cancellation" element={<RefundAndCancellation />}/>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
